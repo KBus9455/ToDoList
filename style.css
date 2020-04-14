@@ -27,10 +27,11 @@ form button {}
 body {
     min-height: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .wrapper {
-    position: relative;
+
     min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
@@ -40,22 +41,28 @@ body {
 }
 
 body img {
-    height: 100%;
+    width: 100%;
     position: absolute;
     z-index: -1;
 }
 
-button,
-form input {
-    font-family: 'Oswald', sans-serif;
-    background-color: #fff;
-    border: solid black 1px;
-    line-height: 25px;
-    height: 25px;
-    padding: 0 10px;
-    letter-spacing: 1px;
-}
+@media (orientation: portrait) {
+    body img {
+        height: 100%;
+        width: initial;
+    }
 
-form span {
-    width: 30px;
-}
+    button,
+    form input {
+        font-family: 'Oswald', sans-serif;
+        background-color: #fff;
+        border: solid black 1px;
+        line-height: 25px;
+        height: 25px;
+        padding: 0 10px;
+        letter-spacing: 1px;
+    }
+
+    form span {
+        width: 30px;
+    }
