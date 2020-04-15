@@ -5,24 +5,32 @@
 }
 
 header,
-form {
+form,
+.searchTasks {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
 header {
-    top: 20%;
+    top: 18%;
     text-transform: uppercase;
     font-size: 40px;
     font-weight: 600;
 }
 
 form {
-    top: 30%;
+    top: 28%;
 }
 
-form button {}
+ul {
+    padding-top: 20px;
+}
+
+li {
+    text-align: left;
+    list-style: none;
+}
 
 body {
     min-height: 100%;
@@ -31,7 +39,6 @@ body {
 }
 
 .wrapper {
-
     min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
@@ -46,23 +53,42 @@ body img {
     z-index: -1;
 }
 
+.searchTasks {
+    top: 40%;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
 @media (orientation: portrait) {
     body img {
         height: 100%;
         width: initial;
     }
+}
 
-    button,
-    form input {
-        font-family: 'Oswald', sans-serif;
-        background-color: #fff;
-        border: solid black 1px;
-        line-height: 25px;
-        height: 25px;
-        padding: 0 10px;
-        letter-spacing: 1px;
-    }
+button,
+input.search,
+form input,
+form button {
+    font-family: 'Oswald', sans-serif;
+    background-color: #fff;
+    border: solid black 1px;
+    line-height: 25px;
+    height: 25px;
+    padding: 0 10px;
+    letter-spacing: 1px;
+}
 
-    form span {
-        width: 30px;
-    }
+form input {
+    margin: 28px;
+}
+
+li button {
+    float: right;
+    margin-top: 5px;
+}
+
+form span {
+    width: 30px;
+}
